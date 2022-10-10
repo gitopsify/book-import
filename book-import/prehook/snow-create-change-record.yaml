@@ -3,14 +3,14 @@ apiVersion: tower.ansible.com/v1alpha1
 kind: AnsibleJob
 metadata:
   name: snow-create-change-record
-  namespace: pacman-app
+  namespace: book-import
   labels:
-    app.kubernetes.io/name: bookimport
+    app.kubernetes.io/name: book-import
 spec:
   tower_auth_secret: tower22
   job_template_name: snow-cr
   extra_vars:
-    app_name: bookimport
+    app_name: book-import
     change_request:
       severity: 2
       priority: 2
